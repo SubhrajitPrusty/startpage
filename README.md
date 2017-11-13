@@ -2,4 +2,4 @@
 
 Minimal Startpage for browsers
 
-[Demo](subhrajitprusty.github.io/startpage)
+[Demo](https://subhrajitprusty.github.io/startpage)
