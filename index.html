@@ -5,19 +5,27 @@
 	<title>Home</title>
 	<link rel="stylesheet" href="./css/style.css">
 	<link rel="stylesheet" href="./css/bootstrap.min.css">
-	<script src="./js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
 </head>
 <body>
 	<div class="container-fluid" id="main-div">
 		<div class="container" id="div2" >
 			<form action="https://duckduckgo.com/" method="GET" class="form-group">
 				<div class="input-group">
+					<span class="input-group-btn">
+						<button id="bttns" class="btn btn-secondary" type="button"><i class="fa fa-search"></i></button>
+					</span>
 					<input type="text" class="form-control" name="q" placeholder="Search the web" aria-label="Search the web">
 					<span class="input-group-btn">
-						<button class="btn btn-secondary" type="submit">Go!</button>
+						<button id="bttns" class="btn btn-secondary" type="submit">Go!</button>
 					</span>
 				</div>
+				<small class="form-text text-muted">
+  				Powered by <a href="https://ddg.gg">DuckDuckGo!</a>
+			</small>
 			</form>
+			
 		</div>
 	</div>
 	

@@ -19,3 +19,13 @@ html, body
 {
 	padding: 10%;
 }
+
+a:hover
+{
+	text-decoration: none;
+}
+
+#bttns
+{
+	/*background-color: #393e46;*/
+}
