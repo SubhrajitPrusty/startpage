@@ -1,0 +1,21 @@
+/**
+{
+	border: 1px solid red;
+}
+*/
+html, body
+{
+	height: 100%;
+}
+
+#main-div
+{
+	height: 100%;
+	background-color: #222831;
+	padding: 10%;
+}
+
+#div2
+{
+	padding: 10%;
+}
