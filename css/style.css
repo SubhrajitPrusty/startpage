@@ -29,3 +29,9 @@ a:hover
 {
 	/*background-color: #393e46;*/
 }
+
+#linksDiv
+{
+	padding-left: 10%;
+	margin-top: -10%;
+}
