@@ -17,7 +17,8 @@ html, body
 
 #div2
 {
-	padding: 10%;
+	width: 80%;
+	margin-top: 10%;
 }
 
 a:hover
@@ -32,6 +33,11 @@ a:hover
 
 #linksDiv
 {
-	padding-left: 10%;
-	margin-top: -10%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#linksDiv a
+{
+	margin: 2px;
 }
