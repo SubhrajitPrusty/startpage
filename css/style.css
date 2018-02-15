@@ -11,7 +11,7 @@ html, body
 #main-div
 {
 	height: 100%;
-	background-color: #222831;
+	background-color: #111;
 	padding: 10%;
 }
 
@@ -26,18 +26,9 @@ a:hover
 	text-decoration: none;
 }
 
-#bttns
-{
-	/*background-color: #393e46;*/
-}
 
 #linksDiv
 {
 	margin: 0 auto;
 	text-align: center;
-}
-
-#linksDiv a
-{
-	margin: 2px;
 }
