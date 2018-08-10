@@ -3,14 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Home</title>
-	<link rel="stylesheet" href="./css/style.css">
-	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
 	<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet"> 
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-	<a href="https://github.com/subhrajitprusty/startpage"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/a6677b08c955af8400f44c6298f40e7d19cc5b2d/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png"></a>
 	<div class="container-fluid" id="main-div">
-		<div class="container" id="div2" >
+		<div id="clock"></div>
+		<div class="container" id="searchinput" >
 			<form action="https://duckduckgo.com/" method="GET" class="form-group">
 				<div class="input-group">
 					<span class="input-group-btn">
@@ -22,27 +24,79 @@
 					</span>
 				</div>
 				<small class="form-text text-muted">
-  				Powered by <a href="https://ddg.gg">DuckDuckGo!</a>
+					Powered by <a href="https://ddg.gg">DuckDuckGo!</a>
 				</small>
-
+				
 			</form>
 		</div>
-
-			<div class="container" id="linksDiv">
-				<div class="btn-group">
-					<a class="btn btn-dark" href="https://google.com"><i class="fab fa-google"></i></a>
-					<a class="btn btn-dark" href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-					<a class="btn btn-dark" href="https://youtube.com"><i class="fab fa-youtube"></i></a>
-					<a class="btn btn-dark" href="https://reddit.com/"><i class="fab fa-reddit"></i></a>
-					<a class="btn btn-dark" href="https://twitch.tv"><i class="fab fa-twitch"></i></a>
-					<a class="btn btn-dark" href="https://steamcommunity.com/"><i class="fab fa-steam"></i></a>
-					<a class="btn btn-dark" href="https://github.com"><i class="fab fa-github"></i></a>
-					<a class="btn btn-dark" href="https://mail.google.com"><i class="fas fa-envelope"></i></a>
-					<!-- <a class="btn btn-dark" href="https://link.to.something">#Add a icon or an initial here#</a> -->
-				</div>
+		
+		<div class="container" id="linksDiv">
+			<div class="btn-group">
+				<a class="btn btn-dark" href="https://google.com"><i class="fab fa-google"></i></a>
+				<a class="btn btn-dark" href="https://facebook.com"><i class="fab fa-facebook"></i></a>
+				<a class="btn btn-dark" href="https://youtube.com"><i class="fab fa-youtube"></i></a>
+				<a class="btn btn-dark" href="https://reddit.com/"><i class="fab fa-reddit"></i></a>
+				<a class="btn btn-dark" href="https://twitch.tv"><i class="fab fa-twitch"></i></a>
+				<a class="btn btn-dark" href="https://steamcommunity.com/"><i class="fab fa-steam"></i></a>
+				<a class="btn btn-dark" href="https://github.com"><i class="fab fa-github"></i></a>
+				<a class="btn btn-dark" href="https://mail.google.com"><i class="fas fa-envelope"></i></a>
+				<!-- <a class="btn btn-dark" href="https://link.to.something">#Add a icon or an initial here#</a> -->
 			</div>
-
+		</div>
+		
 	</div>
-	
+	<script>
+		function clock(){
+			
+			//Save the times in variables
+			
+			var today = new Date();
+			
+			var hours = today.getHours();
+			var minutes = today.getMinutes();
+			var seconds = today.getSeconds();
+			
+			
+			//Set the AM or PM time
+			
+			if (hours >= 12){
+				meridiem = " PM";
+			}
+			else {
+				meridiem = " AM";
+			}
+			
+			
+			//convert hours to 12 hour format and put 0 in front
+			if (hours>12){
+				hours = hours - 12;
+			}
+			else if (hours===0){
+				hours = 12;	
+			}
+			
+			//Put 0 in front of single digit minutes and seconds
+			
+			if (minutes<10){
+				minutes = "0" + minutes;
+			}
+			else {
+				minutes = minutes;
+			}
+			
+			if (seconds<10){
+				seconds = "0" + seconds;
+			}
+			else {
+				seconds = seconds;
+			}
+			
+			
+			document.getElementById("clock").innerHTML = (hours + ":" + minutes + ":" + seconds + meridiem);
+			
+		}
+		
+		setInterval('clock()', 1000);
+	</script>
 </body>
 </html>

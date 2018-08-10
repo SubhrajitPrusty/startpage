@@ -6,19 +6,25 @@
 html, body
 {
 	height: 100%;
+	width: 100%;
+	background-color: #111 !important;
 }
 
 #main-div
 {
+	display: block;
 	height: 100%;
+	width: 100%;
+	position: relative;
 	background-color: #111;
-	padding: 10%;
+	padding: 5%;
 }
 
-#div2
+#searchinput
 {
+	position: relative;
+	margin: 0 auto;
 	width: 80%;
-	margin-top: 10%;
 }
 
 a:hover
@@ -26,9 +32,17 @@ a:hover
 	text-decoration: none;
 }
 
-
 #linksDiv
 {
+	position: relative;
 	margin: 0 auto;
 	text-align: center;
+}
+
+#clock {
+	text-align: center;
+	font-size: 6rem;
+	color: #eeeeee;
+	font-family: 'Roboto', sans-serif;
+	padding: 2.5%;
 }
