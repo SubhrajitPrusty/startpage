@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+
 html, body
 {
 	height: 100%;
@@ -17,4 +19,12 @@ a
 a:hover
 {
 	text-decoration: none;
+}
+
+
+#netflix
+{
+    font-family: 'Bebas Neue';
+    /*font-weight: 100;*/
+    font-size: 16px;
 }
